@@ -1,5 +1,307 @@
 {
-  "generatedAt": null,
-  "targets": [],
-  "repos": []
+  "generatedAt": "2026-07-10T23:37:06.344Z",
+  "targets": [
+    {
+      "owner": "yuchag94",
+      "type": "user"
+    }
+  ],
+  "repos": [
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "devops-bootcamp",
+      "fullName": "yuchag94/devops-bootcamp",
+      "url": "https://github.com/yuchag94/devops-bootcamp",
+      "language": "HTML",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": true,
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 1,
+        "total": 2
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2025-05-08T23:16:13Z",
+      "lastScanned": "2026-07-10T23:37:05.192Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "Docker-HV",
+      "fullName": "yuchag94/Docker-HV",
+      "url": "https://github.com/yuchag94/Docker-HV",
+      "language": null,
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2025-06-11T00:54:21Z",
+      "lastScanned": "2026-07-10T23:37:05.113Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "formulario",
+      "fullName": "yuchag94/formulario",
+      "url": "https://github.com/yuchag94/formulario",
+      "language": "JavaScript",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": {
+        "version": "24.18.0",
+        "cycle": "24",
+        "eolDate": "2028-04-30"
+      },
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2026-06-25T23:54:59Z",
+      "lastScanned": "2026-07-10T23:37:05.421Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "nodejsapp",
+      "fullName": "yuchag94/nodejsapp",
+      "url": "https://github.com/yuchag94/nodejsapp",
+      "language": "Groovy",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2025-09-06T17:35:34Z",
+      "lastScanned": "2026-07-10T23:37:05.103Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "nuestra-historia",
+      "fullName": "yuchag94/nuestra-historia",
+      "url": "https://github.com/yuchag94/nuestra-historia",
+      "language": "JavaScript",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": {
+        "version": "24.18.0",
+        "cycle": "24",
+        "eolDate": "2028-04-30"
+      },
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2026-07-03T02:08:00Z",
+      "lastScanned": "2026-07-10T23:37:05.696Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "obsolencia",
+      "fullName": "yuchag94/obsolencia",
+      "url": "https://github.com/yuchag94/obsolencia",
+      "language": "JavaScript",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": {
+        "version": "24.18.0",
+        "cycle": "24",
+        "eolDate": "2028-04-30"
+      },
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2026-07-10T23:24:54Z",
+      "lastScanned": "2026-07-10T23:37:05.444Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "skills-test-with-actions",
+      "fullName": "yuchag94/skills-test-with-actions",
+      "url": "https://github.com/yuchag94/skills-test-with-actions",
+      "language": "Python",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": {
+        "version": "3.14.6",
+        "cycle": "3.14",
+        "eolDate": "2030-10-31"
+      },
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2026-06-16T17:40:03Z",
+      "lastScanned": "2026-07-10T23:37:06.344Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "Terraform",
+      "fullName": "yuchag94/Terraform",
+      "url": "https://github.com/yuchag94/Terraform",
+      "language": "HCL",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2025-08-11T23:29:22Z",
+      "lastScanned": "2026-07-10T23:37:05.115Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "transporte",
+      "fullName": "yuchag94/transporte",
+      "url": "https://github.com/yuchag94/transporte",
+      "language": "PHP",
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2026-07-03T17:54:22Z",
+      "lastScanned": "2026-07-10T23:37:05.275Z"
+    },
+    {
+      "owner": "yuchag94",
+      "ownerType": "user",
+      "repo": "yuchag94",
+      "fullName": "yuchag94/yuchag94",
+      "url": "https://github.com/yuchag94/yuchag94",
+      "language": null,
+      "languageVersion": null,
+      "versionSource": null,
+      "eol": {
+        "status": "unknown",
+        "eolDate": null,
+        "cycle": null
+      },
+      "recommended": null,
+      "vulnerabilities": {
+        "available": false,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "archived": false,
+      "fork": false,
+      "pushedAt": "2025-07-07T20:11:41Z",
+      "lastScanned": "2026-07-10T23:37:05.269Z"
+    }
+  ]
 }
