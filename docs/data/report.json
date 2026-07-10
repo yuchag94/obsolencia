@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T23:44:52.548Z",
+  "generatedAt": "2026-07-10T23:48:04.574Z",
   "targets": [
     {
       "owner": "yuchag94",
@@ -23,17 +23,17 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
-        "high": 0,
+        "high": 1,
         "medium": 0,
-        "low": 0,
-        "total": 0
+        "low": 1,
+        "total": 2
       },
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-10T23:44:28Z",
-      "lastScanned": "2026-07-10T23:44:45.524Z"
+      "lastScanned": "2026-07-10T23:48:04.262Z"
     },
     {
       "owner": "yuchag94",
@@ -51,7 +51,7 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -61,7 +61,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-06-11T00:54:21Z",
-      "lastScanned": "2026-07-10T23:44:45.589Z"
+      "lastScanned": "2026-07-10T23:48:04.256Z"
     },
     {
       "owner": "yuchag94",
@@ -83,7 +83,7 @@
         "eolDate": "2028-04-30"
       },
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -93,7 +93,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-06-25T23:54:59Z",
-      "lastScanned": "2026-07-10T23:44:45.767Z"
+      "lastScanned": "2026-07-10T23:48:04.391Z"
     },
     {
       "owner": "yuchag94",
@@ -111,17 +111,17 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
-        "high": 0,
-        "medium": 0,
-        "low": 0,
-        "total": 0
+        "high": 5,
+        "medium": 2,
+        "low": 5,
+        "total": 12
       },
       "archived": false,
       "fork": false,
-      "pushedAt": "2025-09-06T17:35:34Z",
-      "lastScanned": "2026-07-10T23:44:45.569Z"
+      "pushedAt": "2026-07-10T23:45:08Z",
+      "lastScanned": "2026-07-10T23:48:04.280Z"
     },
     {
       "owner": "yuchag94",
@@ -143,7 +143,7 @@
         "eolDate": "2028-04-30"
       },
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -153,7 +153,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-03T02:08:00Z",
-      "lastScanned": "2026-07-10T23:44:45.767Z"
+      "lastScanned": "2026-07-10T23:48:04.429Z"
     },
     {
       "owner": "yuchag94",
@@ -175,7 +175,7 @@
         "eolDate": "2028-04-30"
       },
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -184,8 +184,8 @@
       },
       "archived": false,
       "fork": false,
-      "pushedAt": "2026-07-10T23:37:06Z",
-      "lastScanned": "2026-07-10T23:44:45.867Z"
+      "pushedAt": "2026-07-10T23:44:53Z",
+      "lastScanned": "2026-07-10T23:48:04.471Z"
     },
     {
       "owner": "yuchag94",
@@ -201,9 +201,13 @@
         "eolDate": null,
         "cycle": null
       },
-      "recommended": null,
+      "recommended": {
+        "version": "3.14.6",
+        "cycle": "3.14",
+        "eolDate": "2030-10-31"
+      },
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -213,7 +217,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-06-16T17:40:03Z",
-      "lastScanned": "2026-07-10T23:44:52.548Z"
+      "lastScanned": "2026-07-10T23:48:04.419Z"
     },
     {
       "owner": "yuchag94",
@@ -231,7 +235,7 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -241,7 +245,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-08-11T23:29:22Z",
-      "lastScanned": "2026-07-10T23:44:45.627Z"
+      "lastScanned": "2026-07-10T23:48:04.257Z"
     },
     {
       "owner": "yuchag94",
@@ -259,7 +263,7 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -269,7 +273,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-03T17:54:22Z",
-      "lastScanned": "2026-07-10T23:44:45.697Z"
+      "lastScanned": "2026-07-10T23:48:04.550Z"
     },
     {
       "owner": "yuchag94",
@@ -287,7 +291,7 @@
       },
       "recommended": null,
       "vulnerabilities": {
-        "available": false,
+        "available": true,
         "critical": 0,
         "high": 0,
         "medium": 0,
@@ -297,7 +301,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-07-07T20:11:41Z",
-      "lastScanned": "2026-07-10T23:44:45.743Z"
+      "lastScanned": "2026-07-10T23:48:04.574Z"
     }
   ]
 }
