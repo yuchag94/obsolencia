@@ -1,0 +1,17 @@
+{
+  "name": "obsolencia-scanner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Escanea repositorios de GitHub buscando obsolescencia de lenguaje y vulnerabilidades de dependencias.",
+  "scripts": {
+    "scan": "node scan.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.2",
+    "js-yaml": "^4.1.0"
+  }
+}

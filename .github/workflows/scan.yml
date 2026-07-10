@@ -1,0 +1,45 @@
+name: Escaneo de obsolescencia
+
+on:
+  schedule:
+    # Todos los viernes a las 06:00 UTC. Ajusta la hora si necesitas otra
+    # zona horaria (GitHub Actions solo programa cron en UTC).
+    - cron: "0 6 * * 5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan-obsolencia
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependencias
+        working-directory: scripts
+        run: npm install
+
+      - name: Ejecutar escaneo
+        working-directory: scripts
+        env:
+          SCAN_TOKEN: ${{ secrets.SCAN_TOKEN }}
+        run: npm run scan
+
+      - name: Commitear reporte actualizado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/report.json
+          git diff --staged --quiet || git commit -m "chore: actualizar reporte de obsolescencia"
+          git push

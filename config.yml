@@ -1,0 +1,19 @@
+# Cuentas u organizaciones de GitHub a escanear.
+#
+# type: "user" -> repositorios propios de la cuenta dueña del token
+#                 (incluye privados, vía GET /user/repos)
+# type: "org"  -> repositorios de una organización (el token debe tener
+#                 acceso de lectura sobre esa organización)
+targets:
+  - owner: yuchag94
+    type: user
+  # - owner: nombre-de-tu-organizacion
+  #   type: org
+
+# Omitir repos archivados y forks del escaneo
+excludeArchived: true
+excludeForks: true
+
+# Días de anticipación antes de la fecha de fin de soporte (EOL) para
+# marcar una versión como "próxima a vencer" en vez de "vigente"
+eolNearThresholdDays: 180
