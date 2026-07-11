@@ -8,6 +8,11 @@ const STATUS_LABELS = {
 let allRepos = [];
 let sortKey = "fullName";
 let sortDir = 1;
+let activeFilter = "";
+
+function hasOpenVulns(repo) {
+  return Boolean(repo.vulnerabilities?.available && repo.vulnerabilities.total > 0);
+}
 
 async function init() {
   const res = await fetch("data/report.json", { cache: "no-store" });
@@ -21,11 +26,20 @@ async function init() {
 
   populateFilter("language-filter", [...new Set(allRepos.map((r) => r.language).filter(Boolean))]);
   populateFilter("owner-filter", [...new Set(allRepos.map((r) => r.owner))]);
+  populateSidebarCounts();
+  populateStatCard();
 
   document.getElementById("search").addEventListener("input", render);
   document.getElementById("language-filter").addEventListener("change", render);
   document.getElementById("owner-filter").addEventListener("change", render);
-  document.getElementById("status-filter").addEventListener("change", render);
+
+  document.querySelectorAll(".pill-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activeFilter = tab.dataset.filter;
+      document.querySelectorAll(".pill-tab").forEach((t) => t.classList.toggle("active", t === tab));
+      render();
+    });
+  });
 
   document.querySelectorAll("th[data-sort]").forEach((th) => {
     th.addEventListener("click", () => {
@@ -40,6 +54,27 @@ async function init() {
   });
 
   render();
+}
+
+function populateSidebarCounts() {
+  const counts = {
+    all: allRepos.length,
+    eol: allRepos.filter((r) => r.eol?.status === "eol").length,
+    "near-eol": allRepos.filter((r) => r.eol?.status === "near-eol").length,
+    "has-vulns": allRepos.filter(hasOpenVulns).length,
+  };
+  for (const [key, count] of Object.entries(counts)) {
+    const el = document.querySelector(`[data-count="${key}"]`);
+    if (el) el.textContent = `${count} repo${count === 1 ? "" : "s"}`;
+  }
+}
+
+function populateStatCard() {
+  document.getElementById("stat-total").textContent = allRepos.length;
+  document.getElementById("stat-vulns").textContent = allRepos.filter(hasOpenVulns).length;
+  document.getElementById("stat-eol").textContent = allRepos.filter(
+    (r) => r.eol?.status === "eol" || r.eol?.status === "near-eol"
+  ).length;
 }
 
 function populateFilter(id, values) {
@@ -63,13 +98,13 @@ function render() {
   const search = document.getElementById("search").value.trim().toLowerCase();
   const language = document.getElementById("language-filter").value;
   const owner = document.getElementById("owner-filter").value;
-  const status = document.getElementById("status-filter").value;
 
   const filtered = allRepos.filter((repo) => {
     if (search && !repo.fullName.toLowerCase().includes(search)) return false;
     if (language && repo.language !== language) return false;
     if (owner && repo.owner !== owner) return false;
-    if (status && (repo.eol?.status ?? "unknown") !== status) return false;
+    if (activeFilter === "has-vulns" && !hasOpenVulns(repo)) return false;
+    if ((activeFilter === "eol" || activeFilter === "near-eol") && repo.eol?.status !== activeFilter) return false;
     return true;
   });
 

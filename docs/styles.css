@@ -1,10 +1,13 @@
 :root {
-  --bg: #f7f8fa;
+  --bg: #f3f6fd;
   --surface: #ffffff;
-  --text: #1a1d23;
-  --text-muted: #5b6270;
-  --border: #e2e5ea;
-  --accent: #2f6fed;
+  --text: #0b1730;
+  --text-muted: #5b6b8c;
+  --border: #dde5f9;
+  --accent: #2954d6;
+  --accent-strong: #1c3fae;
+  --accent-soft: #eaf1ff;
+  --accent-dark: #101a3d;
 
   --status-eol-bg: #fbe4e4;
   --status-eol-text: #a4232e;
@@ -18,12 +21,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14161a;
-    --surface: #1c1f26;
-    --text: #eef0f4;
-    --text-muted: #9aa1ae;
-    --border: #2c313b;
-    --accent: #6d9bff;
+    --bg: #0a0f22;
+    --surface: #121a35;
+    --text: #eef1fb;
+    --text-muted: #93a0c2;
+    --border: #223061;
+    --accent: #6a92ff;
+    --accent-strong: #89aaff;
+    --accent-soft: #182451;
+    --accent-dark: #060a1a;
 
     --status-eol-bg: #3a1c20;
     --status-eol-text: #f2a4ab;
@@ -42,43 +48,177 @@
 
 body {
   margin: 0;
-  padding: 2rem 1.5rem 3rem;
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  max-width: 1100px;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 1200px;
   margin-inline: auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Sidebar */
+
+.sidebar {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pill-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.pill-tab:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.pill-tab .pill-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pill-tab .pill-caption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.pill-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pill-tab.active .pill-label,
+.pill-tab.active .pill-caption {
+  color: #ffffff;
+}
+
+.sidebar-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 0 0.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Main content */
+
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-header-text {
+  flex: 1 1 420px;
+  min-width: 280px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
 }
 
 .page-header h1 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
 }
 
 .description {
   color: var(--text-muted);
   line-height: 1.55;
-  max-width: 75ch;
+  max-width: 65ch;
+  margin: 0;
 }
 
 .meta {
   color: var(--text-muted);
   font-size: 0.85rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
+
+.stat-card {
+  flex: 0 0 220px;
+  background: var(--accent-dark);
+  border-radius: 18px;
+  padding: 1.1rem 1.3rem;
+  color: #ffffff;
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f5c944;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #c3cbe8;
+}
+
+.stat-card hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 0.1rem 0;
+}
+
+/* Controls */
 
 .controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin: 1.5rem 0 1rem;
+  margin: 2rem 0 1rem;
 }
 
 .controls input,
 .controls select {
-  padding: 0.5rem 0.7rem;
+  padding: 0.55rem 0.8rem;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   background: var(--surface);
   color: var(--text);
   font-size: 0.9rem;
@@ -88,10 +228,12 @@ body {
   flex: 1 1 240px;
 }
 
+/* Table */
+
 .table-wrapper {
   overflow-x: auto;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 16px;
   background: var(--surface);
 }
 
@@ -103,12 +245,13 @@ table {
 
 thead th {
   text-align: left;
-  padding: 0.75rem 1rem;
-  background: var(--bg);
+  padding: 0.8rem 1.1rem;
+  background: var(--accent-soft);
   border-bottom: 1px solid var(--border);
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
+  font-weight: 700;
 }
 
 thead th:hover {
@@ -116,7 +259,7 @@ thead th:hover {
 }
 
 tbody td {
-  padding: 0.65rem 1rem;
+  padding: 0.65rem 1.1rem;
   border-bottom: 1px solid var(--border);
   vertical-align: middle;
 }
@@ -126,13 +269,13 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover {
-  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  background: var(--accent-soft);
 }
 
 td a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 td a:hover {
@@ -141,7 +284,7 @@ td a:hover {
 
 .badge {
   display: inline-block;
-  padding: 0.2rem 0.55rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
@@ -182,4 +325,26 @@ td a:hover {
 
 .page-footer a {
   color: inherit;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .pill-tab {
+    flex: 1 1 45%;
+  }
+
+  .stat-card {
+    flex-basis: 100%;
+  }
 }

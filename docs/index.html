@@ -7,65 +7,100 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="page-header">
-    <h1>Panel de Obsolescencia de Repositorios</h1>
-    <p class="description">
-      Este panel escanea automáticamente los repositorios configurados y muestra,
-      para cada uno, el lenguaje de programación detectado, la versión declarada,
-      si esa versión está próxima a perder soporte oficial (EOL) y las
-      vulnerabilidades abiertas en sus dependencias según la GitHub Advisory
-      Database (el mismo motor que usa Dependabot). Los datos se actualizan
-      automáticamente cada semana mediante GitHub Actions y también pueden
-      refrescarse manualmente. Úsalo como referencia rápida para priorizar
-      actualizaciones de lenguaje y parches de seguridad.
-    </p>
-    <p class="meta" id="generated-at">Cargando...</p>
-  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Filtros rápidos">
+      <button class="pill-tab active" data-filter="" type="button">
+        <span class="pill-label">Todos</span>
+        <span class="pill-caption" data-count="all">0 repos</span>
+      </button>
+      <button class="pill-tab" data-filter="eol" type="button">
+        <span class="pill-label">Vencidos</span>
+        <span class="pill-caption" data-count="eol">0 repos</span>
+      </button>
+      <button class="pill-tab" data-filter="near-eol" type="button">
+        <span class="pill-label">Próximos a vencer</span>
+        <span class="pill-caption" data-count="near-eol">0 repos</span>
+      </button>
+      <button class="pill-tab" data-filter="has-vulns" type="button">
+        <span class="pill-label">Con vulnerabilidades</span>
+        <span class="pill-caption" data-count="has-vulns">0 repos</span>
+      </button>
+      <p class="sidebar-hint">Elige una categoría para filtrar la tabla.</p>
+    </aside>
 
-  <section class="controls">
-    <input type="search" id="search" placeholder="Buscar repositorio..." aria-label="Buscar repositorio" />
-    <select id="language-filter" aria-label="Filtrar por lenguaje">
-      <option value="">Todos los lenguajes</option>
-    </select>
-    <select id="owner-filter" aria-label="Filtrar por cuenta u organización">
-      <option value="">Todas las cuentas/organizaciones</option>
-    </select>
-    <select id="status-filter" aria-label="Filtrar por estado de soporte">
-      <option value="">Todos los estados</option>
-      <option value="eol">Vencido</option>
-      <option value="near-eol">Próximo a vencer</option>
-      <option value="supported">Vigente</option>
-      <option value="unknown">Desconocido</option>
-    </select>
-  </section>
+    <main class="content">
+      <header class="page-header">
+        <div class="page-header-text">
+          <p class="eyebrow">Panel · Obsolescencia</p>
+          <h1>Salud de tus repositorios, de un vistazo.</h1>
+          <p class="description">
+            Este panel escanea automáticamente los repositorios configurados y muestra,
+            para cada uno, el lenguaje de programación detectado, la versión declarada,
+            si esa versión está próxima a perder soporte oficial (EOL) y las
+            vulnerabilidades abiertas en sus dependencias según la GitHub Advisory
+            Database (el mismo motor que usa Dependabot). Los datos se actualizan
+            automáticamente cada semana mediante GitHub Actions y también pueden
+            refrescarse manualmente. Úsalo como referencia rápida para priorizar
+            actualizaciones de lenguaje y parches de seguridad.
+          </p>
+          <p class="meta" id="generated-at">Cargando...</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-row">
+            <span class="stat-value" id="stat-total">0</span>
+            <span class="stat-label">repos escaneados</span>
+          </div>
+          <hr />
+          <div class="stat-row">
+            <span class="stat-value" id="stat-vulns">0</span>
+            <span class="stat-label">con vulnerabilidades</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-value" id="stat-eol">0</span>
+            <span class="stat-label">vencidos o por vencer</span>
+          </div>
+        </div>
+      </header>
 
-  <div class="table-wrapper">
-    <table id="report-table">
-      <thead>
-        <tr>
-          <th data-sort="fullName">Repositorio</th>
-          <th data-sort="language">Lenguaje</th>
-          <th data-sort="languageVersion">Versión actual</th>
-          <th data-sort="eolStatus">Soporte / EOL</th>
-          <th data-sort="recommendedVersion">Versión recomendada</th>
-          <th data-sort="vulnTotal">Vulnerabilidades</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        <tr><td colspan="6">Cargando datos...</td></tr>
-      </tbody>
-    </table>
+      <section class="controls">
+        <input type="search" id="search" placeholder="Buscar repositorio..." aria-label="Buscar repositorio" />
+        <select id="language-filter" aria-label="Filtrar por lenguaje">
+          <option value="">Todos los lenguajes</option>
+        </select>
+        <select id="owner-filter" aria-label="Filtrar por cuenta u organización">
+          <option value="">Todas las cuentas/organizaciones</option>
+        </select>
+      </section>
+
+      <div class="table-wrapper">
+        <table id="report-table">
+          <thead>
+            <tr>
+              <th data-sort="fullName">Repositorio</th>
+              <th data-sort="language">Lenguaje</th>
+              <th data-sort="languageVersion">Versión actual</th>
+              <th data-sort="eolStatus">Soporte / EOL</th>
+              <th data-sort="recommendedVersion">Versión recomendada</th>
+              <th data-sort="vulnTotal">Vulnerabilidades</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr><td colspan="6">Cargando datos...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="empty-state" id="empty-state" hidden>No hay repositorios que coincidan con el filtro.</p>
+
+      <footer class="page-footer">
+        <p>
+          Fuentes: lenguajes y contenidos vía GitHub API · fin de soporte vía
+          <a href="https://endoflife.date" target="_blank" rel="noopener">endoflife.date</a> ·
+          vulnerabilidades vía GitHub Advisory Database (Dependabot Alerts).
+        </p>
+      </footer>
+    </main>
   </div>
-
-  <p class="empty-state" id="empty-state" hidden>No hay repositorios que coincidan con el filtro.</p>
-
-  <footer class="page-footer">
-    <p>
-      Fuentes: lenguajes y contenidos vía GitHub API · fin de soporte vía
-      <a href="https://endoflife.date" target="_blank" rel="noopener">endoflife.date</a> ·
-      vulnerabilidades vía GitHub Advisory Database (Dependabot Alerts).
-    </p>
-  </footer>
 
   <script src="app.js"></script>
 </body>
