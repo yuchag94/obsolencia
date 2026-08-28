@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:34:43.751Z",
+  "generatedAt": "2026-08-28T17:58:50.359Z",
   "targets": [
     {
       "owner": "yuchag94",
@@ -33,7 +33,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-10T23:44:28Z",
-      "lastScanned": "2026-08-21T06:34:43.135Z"
+      "lastScanned": "2026-08-28T17:58:49.918Z"
     },
     {
       "owner": "yuchag94",
@@ -61,7 +61,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-06-11T00:54:21Z",
-      "lastScanned": "2026-08-21T06:34:43.195Z"
+      "lastScanned": "2026-08-28T17:58:49.980Z"
     },
     {
       "owner": "yuchag94",
@@ -78,7 +78,7 @@
         "cycle": null
       },
       "recommended": {
-        "version": "24.19.0",
+        "version": "24.20.0",
         "cycle": "24",
         "eolDate": "2028-04-30"
       },
@@ -93,7 +93,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-08-18T02:57:50Z",
-      "lastScanned": "2026-08-21T06:34:43.524Z"
+      "lastScanned": "2026-08-28T17:58:50.188Z"
     },
     {
       "owner": "yuchag94",
@@ -110,7 +110,7 @@
         "cycle": null
       },
       "recommended": {
-        "version": "24.19.0",
+        "version": "24.20.0",
         "cycle": "24",
         "eolDate": "2028-04-30"
       },
@@ -125,7 +125,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-06-25T23:54:59Z",
-      "lastScanned": "2026-08-21T06:34:43.451Z"
+      "lastScanned": "2026-08-28T17:58:50.196Z"
     },
     {
       "owner": "yuchag94",
@@ -153,7 +153,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-27T23:57:40Z",
-      "lastScanned": "2026-08-21T06:34:43.279Z"
+      "lastScanned": "2026-08-28T17:58:50.007Z"
     },
     {
       "owner": "yuchag94",
@@ -170,7 +170,7 @@
         "cycle": null
       },
       "recommended": {
-        "version": "24.19.0",
+        "version": "24.20.0",
         "cycle": "24",
         "eolDate": "2028-04-30"
       },
@@ -185,7 +185,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-03T02:08:00Z",
-      "lastScanned": "2026-08-21T06:34:43.429Z"
+      "lastScanned": "2026-08-28T17:58:50.190Z"
     },
     {
       "owner": "yuchag94",
@@ -202,7 +202,7 @@
         "cycle": null
       },
       "recommended": {
-        "version": "24.19.0",
+        "version": "24.20.0",
         "cycle": "24",
         "eolDate": "2028-04-30"
       },
@@ -216,8 +216,8 @@
       },
       "archived": false,
       "fork": false,
-      "pushedAt": "2026-08-14T07:15:07Z",
-      "lastScanned": "2026-08-21T06:34:43.751Z"
+      "pushedAt": "2026-08-21T06:34:44Z",
+      "lastScanned": "2026-08-28T17:58:50.193Z"
     },
     {
       "owner": "yuchag94",
@@ -249,7 +249,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-06-16T17:40:03Z",
-      "lastScanned": "2026-08-21T06:34:43.510Z"
+      "lastScanned": "2026-08-28T17:58:50.180Z"
     },
     {
       "owner": "yuchag94",
@@ -277,7 +277,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-08-11T23:29:22Z",
-      "lastScanned": "2026-08-21T06:34:43.507Z"
+      "lastScanned": "2026-08-28T17:58:50.230Z"
     },
     {
       "owner": "yuchag94",
@@ -305,7 +305,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2026-07-03T17:54:22Z",
-      "lastScanned": "2026-08-21T06:34:43.570Z"
+      "lastScanned": "2026-08-28T17:58:50.307Z"
     },
     {
       "owner": "yuchag94",
@@ -333,7 +333,7 @@
       "archived": false,
       "fork": false,
       "pushedAt": "2025-07-07T20:11:41Z",
-      "lastScanned": "2026-08-21T06:34:43.601Z"
+      "lastScanned": "2026-08-28T17:58:50.359Z"
     }
   ]
 }
